@@ -12,6 +12,7 @@ gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
 gem 'pry-rails'
 gem 'devise'
+gem 'rspec-rails', '~> 3.6'
 
 group :development, :test do
   gem 'sqlite3'
