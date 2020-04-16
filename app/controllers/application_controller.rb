@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_in_path_for(resource)
-    users_show_path(id: current_user.id) # ログイン後に遷移するpathを設定
+    user_path(id: current_user.id) # ログイン後に遷移するpathを設定
   end
 
   def after_sign_out_path_for(resource)
