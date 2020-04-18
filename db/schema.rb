@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200415050515) do
+ActiveRecord::Schema.define(version: 20200418122710) do
 
-  create_table "skill_maps", force: :cascade do |t|
+  create_table "kitchens", force: :cascade do |t|
     t.integer "conro"
     t.integer "oven"
     t.integer "flier"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20200415050515) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_skill_maps_on_user_id"
+    t.index ["user_id"], name: "index_kitchens_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
