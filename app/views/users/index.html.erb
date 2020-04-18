@@ -1,6 +1,5 @@
 <h1>ユーザー一覧</h1>
 <h3><% @users.each do |user| %>
  <p><%= user.name %><br>
- <%= user.email %><br></p> 
-  
+ <%= link_to "スキルマップ編集", '#' %><br></p> 
 <% end %></h3>
