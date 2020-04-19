@@ -1,4 +1,5 @@
 <div class="text-center">
 <h1>ユーザー名 : <%= @user.name %></h1>
 <h1>メールアドレス : <%= @user.email %></h1>
+<%= link_to "スキルマップ編集", edit_user_kitchen_path(@user, @kitchen_skill_map, id: @user.id) %>
 </div>
