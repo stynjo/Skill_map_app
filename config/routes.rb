@@ -12,6 +12,9 @@ Rails.application.routes.draw do
  root 'static_pages#top'
  
  resources :users do
-    resources :kitchens, only: :edit 
-  end
+ end
+ 
+ 
+ resources :kitchens do
+    end
 end
