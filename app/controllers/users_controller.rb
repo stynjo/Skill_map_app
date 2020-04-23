@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     else
      @kitchen_skill_map = @user.kitchen
     end
+    @json = @kitchen_skill_map.to_json
   end
   
   def index
