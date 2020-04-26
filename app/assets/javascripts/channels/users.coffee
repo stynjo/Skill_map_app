@@ -1,12 +1,12 @@
-window.draw_graph = -> 
+window.draw_graph = (labels, data) ->
     ctx = document.getElementById("myChart").getContext('2d')
     myChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple",],
+            labels: labels,
             datasets: [{
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2],
+                data: data,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -21,16 +21,17 @@ window.draw_graph = ->
                     'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)'
                 ],
-                borderWidth: 5
+                borderWidth: 5,
             }]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
+            scale: {
+                ticks: {
+                    beginAtZero:true,
+                    max: 5,
+                    min: 0,
+                    stepSize: 1
+                }
             }
         }
     })

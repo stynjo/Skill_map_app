@@ -4,6 +4,8 @@
 
 <%= link_to "スキルマップ編集", edit_kitchen_path(@user, @kitchen_skill_map, id: @user.id) %>
 
-<canvas id="myChart" width="10" height="10"></canvas> 
-<script>draw_graph();</script> 
+<canvas id="myChart" width="50" height="50"></canvas> 
+<script>
+    console.log("labels", gon.kitchen_skill_labels)
+    draw_graph(gon.kitchen_skill_labels, gon.kitchen_skill_values);</script>
 </div>
