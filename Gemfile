@@ -2,6 +2,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '~> 5.1.6'
+gem 'rails-i18n'
 gem 'faker'
 gem 'bootstrap-sass'
 gem 'puma',         '~> 3.7'
@@ -14,6 +15,8 @@ gem 'jbuilder',     '~> 2.5'
 gem 'pry-rails'
 gem 'devise'
 gem 'rspec-rails', '~> 3.6'
+gem 'chart-js-rails', '~> 0.1.4'
+gem 'gon'
 
 group :development, :test do
   gem 'sqlite3'
