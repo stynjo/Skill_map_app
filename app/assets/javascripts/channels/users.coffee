@@ -26,6 +26,9 @@ window.draw_graph = (labels, data) ->
         },
         options: {
             scale: {
+                  pointLabels: {
+                   fontSize: 35 
+                  },
                 ticks: {
                     beginAtZero:true,
                     max: 5,
