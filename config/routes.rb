@@ -14,6 +14,11 @@ Rails.application.routes.draw do
  resources :users do
  end
  
+ resources :halls do
+   member do
+     get 'change_map'
+   end
+ end
  
  resources :kitchens do
     end
