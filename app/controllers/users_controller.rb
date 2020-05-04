@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     kitchen_skill_array = %w[conro oven flier drink salad]
       gon.kitchen_skill_values = kitchen_skill_array.map do |label|
         @user.kitchen[label]
-      end
+      end 
       
     @user.create_hall(hall: 0, server: 0, entrance: 0, washer: 0, reader: 0) if @user.hall.nil?
     hall_skill_array = %w[hall server entrance washer reader]

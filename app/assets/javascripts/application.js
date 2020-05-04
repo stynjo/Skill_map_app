@@ -16,3 +16,7 @@
 //= require turbolinks
 //= require_tree .
 //= require Chart.min
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
