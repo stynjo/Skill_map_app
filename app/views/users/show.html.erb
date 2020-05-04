@@ -1,3 +1,13 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log("labels", gon.kitchen_skill_labels)
+    draw_graph("kitchenChart", gon.kitchen_skill_labels, gon.kitchen_skill_values);
+
+    console.log("labels", gon.hall_skill_labels)
+    draw_graph("hallChart", gon.hall_skill_labels, gon.hall_skill_values);
+  })
+</script>
+
 <div class="text-center">
 <h1>ユーザー名 : <%= @user.name %></h1>
 <h1>メールアドレス : <%= @user.email %></h1>
@@ -18,21 +28,9 @@
   <div class="tab-content">
     <div id="kitchen" class="tab-pane active">
       <canvas id="kitchenChart" width="140" height="50"></canvas> 
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          console.log("labels", gon.kitchen_skill_labels)
-          draw_graph1(gon.kitchen_skill_labels, gon.kitchen_skill_values);
-        })
-      </script>
     </div>
     <div id="hall" class="tab-pane">
       <canvas id="hallChart" width="140" height="50"></canvas> 
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          console.log("labels", gon.hall_skill_labels)
-          draw_graph2(gon.hall_skill_labels, gon.hall_skill_values);
-        })
-      </script>
     </div>
   </div>
 </div>
