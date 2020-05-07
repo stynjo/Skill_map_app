@@ -1,10 +1,10 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    console.log("labels", gon.kitchen_skill_labels)
+    console.log("labels", gon)
     draw_graph("kitchenChart", gon.kitchen_skill_labels, gon.kitchen_skill_values);
 
-    console.log("labels", gon.hall_skill_labels)
-    draw_graph("hallChart", gon.hall_skill_labels, gon.hall_skill_values);
+    
+    draw_graph("hallChart", gon.hall_skill_labels, [5,4,5,4,5]);
   })
 </script>
 

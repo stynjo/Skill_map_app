@@ -1,5 +1,6 @@
 window.draw_graph = (targetId, labels, data) ->
     ctx = document.getElementById(targetId).getContext('2d')
+    console.log(targetId)
     hallChart = new Chart(ctx, {
         type: 'radar',
         data: {

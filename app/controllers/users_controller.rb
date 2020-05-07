@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       gon.hall_skill_values = hall_skill_array.map do |label|
         @user.hall[label]
       end
+      #binding.pry
       
     gon.kitchen_skill_labels = %w[コンロ オーブン フライヤー ドリンク サラダ場]
     gon.hall_skill_labels = %w[ホール サーバー エントランス ウォッシャー リーダー]
