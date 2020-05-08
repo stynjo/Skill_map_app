@@ -1,6 +1,6 @@
-window.draw_graph = (labels, data) ->
-    ctx = document.getElementById("myChart").getContext('2d')
-    myChart = new Chart(ctx, {
+window.draw_graph = (targetId, labels, data) ->
+    ctx = document.getElementById(targetId).getContext('2d')
+    hallChart = new Chart(ctx, {
         type: 'radar',
         data: {
             labels: labels,

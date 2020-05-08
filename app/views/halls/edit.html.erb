@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @hall_skill_map,  local: true) do |f| %>
+  
+      <%= f.label :hall %>
+      <%= f.number_field :hall, class: "form-control", min: 0, max: 5 %>
+  
+      <%= f.label :server %>
+      <%= f.number_field :server, class: "form-control", min: 0, max: 5 %>
+  
+      <%= f.label :entrance %>
+      <%= f.number_field :entrance, class: "form-control", min: 0, max: 5 %>
+  
+      <%= f.label :washer %>
+      <%= f.number_field :washer, class: "form-control", min: 0, max: 5 %>
+  
+      <%= f.label :reader %>
+      <%= f.number_field :reader, class: "form-control", min: 0, max: 5 %>
+  
+      <%= f.submit "更新", class: "btn btn-primary btn-block btn-user--edit" %>
+    <% end %>
+  </div>
+</div>
