@@ -1,10 +1,10 @@
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    console.log("labels", gon)
+  document.addEventListener('turbolinks:load', () => {
+    console.log("labels", gon.kitchen_skill_labels)
     draw_graph("kitchenChart", gon.kitchen_skill_labels, gon.kitchen_skill_values);
 
-    
-    draw_graph("hallChart", gon.hall_skill_labels, [5,4,5,4,5]);
+    console.log("labels", gon.hall_skill_labels)
+    draw_graph("hallChart", gon.hall_skill_labels, gon.hall_skill_values);
   })
 </script>
 
@@ -12,7 +12,7 @@
 <h1>ユーザー名 : <%= @user.name %></h1>
 <h1>メールアドレス : <%= @user.email %></h1>
 
-<%= link_to "キッチンスキルマップ編集", edit_kitchen_path(@kitchen_skill_map, id: @user.id ) %>
+<%= link_to "キッチンスキルマップ編集", edit_kitchen_path(@kitchen_skill_map, id: @user.id ) %></br>
 <%= link_to "ホールスキルマップ編集", edit_hall_path(@hall_skill_map, id: @user.id ) %>
 
   <ul class="nav nav-tabs">
